@@ -1,0 +1,56 @@
+<template name="navbar">
+	<div class="navbar navbar-fixed-top navbar-inverse" id="navbar">
+	  <div class="navbar-inner">
+		<div class="container">
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				{{#if currentUser}}
+					<span class="icon-bar"></span>
+				{{/if}}
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>	
+			<a class="brand" href="#">TOMÉ</a>
+			<div class="nav-collapse collapse">
+			  <ul class="nav">
+				<li><a href="#hero">{{earlyaccess}}</a></li>
+				{{#if currentUser}}
+					<li class="animated fadeInDown"><a href="#private">{{privatearea}}</a></li>
+				{{/if}}
+				<li><a href="#movie">{{themovie}}</a></li>
+				<li><a href="#flipboard">{{featuredartists}}</a></li>
+				<li><a href="#art-gallery">{{gallery}}</a></li>
+				<li><a href="#ipad">{{ipadapp}}</a></li>
+			  </ul>
+			  <ul class="nav pull-right">
+				  {{#if currentUser}}
+				  	<li class="animated fadeInDown"><a id="logout">{{logout}}</a></li>
+				  {{else}}
+				  	<li class="animated fadeInDown"><a id="navlogin">{{login}}</a></li>
+				  {{/if}}
+				  {{> lang}}
+			  </ul>
+			</div>
+		</div>
+	  </div>
+	</div>
+</template>
+
+<template name="notifier">
+  <div class="animated fadeInDown">
+	  <p class="important">{{status}}</p>
+  </div>
+</template>
+
+<template name="lang">
+	      <li class="dropdown">
+	    	<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{language}}</a>
+	    	<ul class="dropdown-menu" id="lang-choice-menu">
+	    	  <li id="lang-ee" class="lang-choice"><a href="/ee">{{estonian}}</a></li>
+	    	  <li id="lang-en" class="lang-choice"><a href="/en">{{english}}</a></li>
+	    	  <li id="lang-pt" class="lang-choice"><a href="/pt">{{portuguese}}</a></li>
+	    	</ul>
+	      </li>
+</template>

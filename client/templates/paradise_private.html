@@ -1,0 +1,300 @@
+<template name="player">
+  <div class="animated fadeIn" id="player">
+	  <div class="row" id="row-player">
+	  	<div class="span12 player" id="player-header">
+	  		<div id="player-container"></div>
+	  	</div>
+	  </div>
+  </div>
+</template>
+
+<template name="private">
+	<div class="container">
+	<div id="private" class="animated fadeIn" style="margin-bottom:20px;">
+		<div class="row" id="row-private-header">
+			<div class="span12 private" id="private-header">
+				<div>
+					<h1 class="animated fadeIn" id="title-private-area">{{secret}}</h1>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="row-private" style="">
+			<div class="container private" style="padding: 20px 0px 20px 0px; height: 650px;">
+				<div class="span2"></div>
+				<div class="span8" id="private-inner">
+					<ul class="nav nav-tabs">
+						<li class="active"><a href="#home" data-toggle="tab">{{watchmovie}}</a></li>
+						<li><a class="" href="#story" data-toggle="tab">{{storychapters}}</a></li>
+						<li><a class="" href="#budget" data-toggle="tab">{{goalbudget}}</a></li>
+						<li><a class="" href="#tedx" data-toggle="tab" style="text-transform:none;">TEDx</a></li>
+						 <li style="border-left:2px solid #fff; padding-left:13px;"><a class="" href="#payments" data-toggle="tab">{{payments}}</a></li>
+						 <li><a class="" href="#messages" data-toggle="tab">{{messages}}</a></li>
+					</ul>
+
+					<div class="tab-content">
+					  <div class="tab-pane active animated fadeIn" id="home">
+						<h3>{{helloName}}</h3>
+							<h6>{{youareseeingthis}}</h6><br />
+							<h6>{{alwaysconstructed}}</h6><br />
+							<h6>{{becauseunfinished}}</h6><br />
+							<h6>{{raisingfifteenk}}</h6><br />
+
+							<h6><a href="#watchMovieModal" id="watchMovieModalButton" role="button" class="btn btn-large btn-warning" data-toggle="modal"><i class="icon-play"></i> {{watchcurrentcut}}</a> {{updatedwhen}}<br /><br />
+
+							-- Kris</h6><br />
+
+							<div id="watchMovieModal" style="background:#000;border:2px solid #fff;width: 1180px; height:710px; margin: -364px 0 0 -590px;" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							 <div class="modal-header" style="border:0;height:0px;">
+								 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+							  </div>
+							  <div class="modal-body animated fadeIn" style="max-height: 800px;">
+								<iframe id="player-iframe" style="border:10px solid #000;margin-left:5px;" src="http://player.vimeo.com/video/63993839?api=1&amp;player_id=player-iframe" width="1120px" height="630px" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+							  </div>
+							</div>
+					  </div>
+					  <div class="tab-pane animated fadeIn" id="budget">
+						 {{>budget}} 
+					  </div>
+					  <div class="tab-pane animated fadeIn" id="tedx">
+						{{>tedx}}
+					  </div>
+					  <div class="tab-pane animated fadeIn" id="messages">
+						{{>messages}}
+					  </div>
+					  <div class="tab-pane animated fadeIn" id="story"> 
+						  {{>story}}
+					  </div>
+					  <div class="tab-pane animated fadeIn" id="payments">
+						{{>payments}}
+					  </div>
+					</div>																	
+					</h6>
+				</div>
+				<div class="span2"></div>
+			</div>
+		</div>
+	</div>
+</div>
+</template>
+
+<template name="payments">
+	<div>
+		  <h3>{{payments}} <i class="icon-credit-card"></i></h3>
+		  <div class="pull-right">
+			  <img src="img/stripe-payments-example.jpg" class="img-rounded" style="width:350px; margin:0px 0px 5px 15px;">		
+		  </div>
+		  <h6> 
+		  {{{paymentscontent}}}
+		  </h6>
+	  </div> 
+</template>
+
+<template name="story">
+	<div style="padding: 0px 0px 10px 0px;">
+		  <h3>{{story}}</h3>
+		  <h6><div class="pull-right"><img src="artists/alex-keller-fonseca-700.jpg" class="img-rounded" style="margin: 0px 0px 0px 20px; width:350px;" /></div>{{storyalex}}</h6><br />
+		 <h6>
+			  <a href="#modalChapters" role="button" class="btn btn-large btn-warning" data-toggle="modal"><i class="icon-book"></i> {{readchapters}} </a> {{updatedwhen}}
+		 </h6> 
+	  </div>
+	  <div id="modalChapters" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="background:#000;">
+	  	   <div class="modal-header" style="border:0;height:0px;">
+	  	   		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	  	  	 	<h3 id="myModalLabel" style="text-align:center;color:#000;">{{story}}</h3>
+	  	   </div>
+	  	   <div class="modal-body animated fadeIn" style="max-height: 800px;">
+		  	   <div class="accordion" id="accordion2">
+		  	   	<div class="accordion-group">
+		  	   	  	<div class="accordion-heading">
+		  	   	  	  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+		  	   	  		<i class="icon-bookmark"></i> {{chapter1title}}
+		  	   	  	  </a>
+		  	   	  	</div>
+		  	   	  	<div id="collapseOne" class="accordion-body collapse">
+		  	   	  	  <div class="accordion-inner">
+		  	   	  		{{chapter1}}
+		  	   	  	  </div>
+		  	   	  	</div>
+		  	   	</div>
+		  	   	<div class="accordion-group">
+		  	   	  	<div class="accordion-heading">
+		  	   	  	  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+		  	   	  		<i class="icon-bookmark"></i> {{chapter2title}}
+		  	   	  	  </a>
+		  	   	  	</div>
+		  	   	  	<div id="collapseTwo" class="accordion-body collapse">
+		  	   	  	  <div class="accordion-inner">
+			  	   	  	{{chapter2}}
+		  	   	  	  </div>
+		  	   	  	</div>
+		  	   	</div>
+		  	   	<div class="accordion-group">
+		  	   		<div class="accordion-heading">
+		  	   		  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+		  	   		  	<i class="icon-bookmark"></i> {{chapter3title}}
+		  	   		  </a>
+		  	   		</div>
+		  	   		<div id="collapseThree" class="accordion-body collapse">
+		  	   		  <div class="accordion-inner">
+		  	   		  	{{chapter3}}
+		  	   		  </div>
+		  	   		</div>
+		  	   	</div>
+		  	   	<div class="accordion-group">
+		  	   	  	<div class="accordion-heading">
+		  	   	  	  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
+		  	   	  	  	<i class="icon-bookmark"></i> {{chapter4title}}
+		  	   	  	  </a>
+		  	   	  	</div>
+		  	   	  	<div id="collapseFour" class="accordion-body collapse">
+		  	   	  	  <div class="accordion-inner">
+		  	   	  	  	{{chapter4}}
+		  	   	  	  </div>
+		  	   	  	</div>
+		  	   	 </div>
+		  	   	<div class="accordion-group">
+		  	   	  	<div class="accordion-heading">
+		  	   	  	  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive">
+		  	   	  	  	<i class="icon-bookmark"></i> {{chapter5title}}
+		  	   	  	  </a>
+		  	   	  	</div>
+		  	   	  	<div id="collapseFive" class="accordion-body collapse">
+		  	   	  	  <div class="accordion-inner">
+		  	   	  	  	{{chapter5}}
+		  	   	  	  </div>
+		  	   	  	</div>
+		  	   	 </div>
+		  	   	 <div class="accordion-group">
+		  	   	   	<div class="accordion-heading">
+		  	   	   	  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSix">
+		  	   	   	  	<i class="icon-bookmark"></i> {{chapter6title}}
+		  	   	   	  </a>
+		  	   	   	</div>
+		  	   	   	<div id="collapseSix" class="accordion-body collapse">
+		  	   	   	  <div class="accordion-inner">
+		  	   	   	  	{{chapter6}}
+		  	   	   	  </div>
+		  	   	   	</div>
+		  	   	  </div>
+		  	   	 <div class="accordion-group">
+		  	   	   	<div class="accordion-heading">
+		  	   	   	  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSeven">
+		  	   	   	  	<i class="icon-bookmark"></i> {{chapter7title}}
+		  	   	   	  </a>
+		  	   	   	</div>
+		  	   	   	<div id="collapseSeven" class="accordion-body collapse">
+		  	   	   	  <div class="accordion-inner">
+		  	   	   	  	{{chapter7}}
+		  	   	   	  </div>
+		  	   	   	</div>
+		  	   	  </div>
+		  	   </div>
+	  	  </div>
+	   </div>
+</template>
+
+<template name="tedx">
+	<div>
+		<h3>{{tedx}}</h3>
+		<div class="pull-right">
+		  	  <img src="img/tedx-team.jpg" class="img-rounded" style="width:400px; margin: 0px 0px 5px 15px;"/>
+		</div>
+		<h6>
+			 {{{tedxcontent}}}
+		<i class="icon-map-marker"></i> {{tedxdatelocation}} <br /><br />
+		 <!--<a href="#modalChapters" role="button" class="btn btn-large btn-warning" data-toggle="modal"><i class="icon-book"></i> Vaata Osalejate Nimekirja </a> (Hetkel Salajane Info - Palun Mitte Levitada)-->
+		</h6>
+	</div>
+</template>
+
+<template name="messages">
+	<div>
+		<div><h3>{{messages}} <i class="icon-comments"></i></3></div>
+		<div class="pull-right" style="background:#fff; width:480px; border-radius:7px; margin: 0px 0px 0px 0px;">												
+			<div style="width:460px;padding:10px 10px 10px 10px; background:#0b8cbe; border-radius:7px 7px 0px 0px; text-align:center;">
+				<strong>{{privatemessages}}</strong>
+			</div>
+			<div style="width:450px;">
+				<table class="table">
+					<tbody>
+				  	<tr>
+				  	  <td style="border:0px; color:#000;"><strong>Example message:</strong> Dude, your film is fantastic. Can you send me some unique goodies I can get no-where else? I want to give you money in return so you can continue your artistic career!</td>
+				  	</tr>
+				  	<tr>
+				  	  <td style="border:0px; color:green;">Yay! Go right ahead and poke the 1-click payment button!</td>
+				  	</tr>
+				  	<tr>
+				  	  <td style="border:0px; color:000;">Cheers mate!</td>
+				  	</tr>
+					</tbody>
+				</table>  
+		  	</div>
+			<div style="padding: 7px; background:#0b8cbe; border-radius:7px;">  
+			  <form class="form-horizontal">
+				<div>
+					<textarea disabled="disabled" rows="3" style="width:450px;" id="inputEmail"></textarea>
+				</div>
+				<div>
+					<button disabled="disabled" style="margin-top:5px;" class="btn btn-mini btn-primary" type="submit"> <i class="icon-reply"></i> Send</button>
+				</div>
+			  </form>
+			</div> 
+		</div>
+		<h6>{{futuremsgchannel}} <br /><br />-- Kris</h6>
+	</div>
+</template>
+
+<template name ="budget">
+	  <div>
+		<h3>{{why}}</h3>
+		<h6>{{{whycontent}}}</h6>
+		<br /><br />
+	
+		<h6><a href="#budgetModal" role="button" class="btn btn-large btn-warning" data-toggle="modal"><i class="icon-table"></i> {{analysebudget}} </a> {{updatedwhen}}</h6><br /><br />	  
+	  </div>  
+	
+	  <div id="budgetModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		   <div class="modal-header" style="border:0;height:0px;">
+		   		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		  	 	<h3 id="myModalLabel" style="text-align:center;color:#000;">{{budget}}</h3>
+		   </div>
+		   <div class="modal-body animated fadeIn" style="max-height: 800px;">
+		  	<table class="table" style="color:#000;">
+		  		<thead>
+		  	  	<tr>
+		  	  	  <th>{{activity}}</th>
+		  	  	  <th style="width:100px;">Kulu</th>
+		  	  	</tr>
+		  		</thead>
+		  		<tbody>
+		  	  	<tr>
+		  	  	  <td>Filmida 30min juurde praegusele 42min lõikele, et saavutada 72min feature-pikkus, mida saan 2014. aasta kevadel IDFA konverentsile Amsterdamis esitada Interactive Doc kategoorias. Möödunud 2 aastat tekitavad tugeva aja-mõõtme filmis ning saab näha mis tegelastega edasi juhtunud on. Samuti tahan, et film jõuaks ringiga tagasi Sao Tomele (Praegune lõpp on Portugalis).</td>
+		  	  	  <td>7500 EUR</td>
+		  	  	</tr>
+		  	  	<tr>
+		  	  	  <td>iPad äpi loomine. Kuna olen Node.js ja iOS arendaja, oman tehnilist võimu oma projekti üle ja hoian kulusid kokku, panustades oma aega ja oskuseid arendustegevusse -- kuid vajan abi disainis.</td>
+		  	  	  <td>3500 EUR</td>
+		  	  	</tr>
+		  	  	<tr>
+		  	  	  <td>Muusika-litsentsid, heli uuesti-lindistamine, kus vaja, ning professionaalne montaaž kogu filmile.</td>
+		  	  	  <td>1500 EUR</td>
+		  	  	</tr>
+		  	  	<tr>
+		  	  	  <td>Keskonna-portree stiilis fotod igast kunstnikust, et film paremini tootestada, kuna minu uurimustöö näitab, et poster loeb, samuti pildid mida sotsiaalmmeedias jagada.</td>
+		  	  	  <td>750 EUR</td>
+		  	  	</tr>
+		  	  	<tr>
+		  	  	  <td>Tõlkimine 5 lisa-keelde. Eesti, inglise ja portugali keel on olemas. Tahan lisada veel prantsuse, hispaania, mandariini, jaapani ja araabia keeled, et filmiga siseneda neile kasvavatele App Store turgudele. Valitud riikides on olemas Aafrika filmide festivalid, millega koostööd teha.</td>
+		  	  	  <td>750 EUR</td>
+		  	  	</tr>
+		  		</tbody>
+		  		<tfoot>
+		  			<tr>
+		  			  <th style="text-align:right;">Kokku:</th>
+		  			  <th>15 000 EUR</th>
+		  			</tr>
+		  		</tfoot>
+		  	  </table>  
+		   </div>
+	 </div>
+</template>

@@ -1,0 +1,154 @@
+<head>
+  <title>Early Access</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tomé, the documentary — As the young painter Alex Keller Fonseca journeys through the forgotten island nation of São Tomé and Príncipe, we meet 13 talented people, who share with us their dreams."/>
+  <meta name="google-site-verification" content="g2Lk7G78UmRFWElltvttYdKtsfRsydIU58sxu3ESMMc" />
+  
+  <meta property="og:image" content="http://tome.meteor.com/gallery/page-1.jpg"/>
+  <meta property="og:video" content="http://player.vimeo.com/video/63993839"/>
+  <meta property="og:title" content="Early Access"/>
+  <meta property="og:url" content="http://tome.meteor.com/"/>
+  <meta property="og:site_name" content="Tomé, the documentary — Early Access"/>
+  <meta property="og:type" content="movie"/>
+  <meta property="og:description" content="We will find access to the sources of creativity of artists, and discover how their efforts, despite the uncertainties and obstacles, are worth it. This film will inspire each of us to seize fate by the horns and fulfill our souls by creating something — by giving physical form to our thoughts."/>
+  
+  <link rel="canonical" href="http://tome.meteor.com/" />
+  <link rel="shortcut icon" href="http://tome.meteor.com/tome-16x16.png" />
+  <link rel="apple-touch-icon-precomposed" href="http:/tome.meteor.com/tome-114x114.png" />
+</head>
+
+<body>	
+	{{> notifier}}
+	{{> navbar}}
+	{{#if currentUser}}
+		{{> private}}
+	{{/if}}
+	{{> hero}}
+	{{> movie}}
+	{{> featured}}
+	{{> artgallery}}
+	{{> ipad}}
+	{{> footer}}
+</body>
+
+<template name="hero">
+	<div class="container">
+		<div class="row" id="row-hero">
+			<div id="hero" class="span12 animated fadeIn">
+				<div class="row">
+					{{#if currentUser}}
+						{{> paradiseLoggedIn}}
+					{{else}}
+						{{> paradiseLoggedOut}}
+					{{/if}}	
+				</div>
+				<div class="row">
+					{{#if currentUser}}	
+						<div class="span4 offset2">	
+							{{> pledge}} 
+						</div>
+						<div class="span4">
+							{{> why}}
+						</div>
+						<div class="span2"></div>
+					{{else}}
+						<div class="span3 offset6">	
+							{{> user_info}}
+						</div>
+						<div class="span3">
+							<!-- Space -->
+						</div>
+					{{/if}}	
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="paradiseLoggedIn">
+	<div class="span2"></div>
+	<div class="span8">
+		<div class="row">
+			<div class="span8 animated fadeIn" id="paradise">
+				{{> supporters}}
+			</div>
+		</div>
+		<div class="row" id="row-progress">
+			{{> progress}}
+		</div>
+	</div>
+	<div class="span2"></div>
+</template>
+
+<template name="progress">
+	<div id="progress" class="span8 animated fadeIn">
+		<div class="progress progress-striped" style="height:40px;overflow:visible;">
+		  <div class="bar" style="width:{{pledgeProgressPercent}}"><div class="pctraised"><a href="#" class="tip-trigger tipFadeUp" style="color:#fff;">
+<span>{{pledgeProgressEuros}}</span>{{pledgeProgressPercent}}</a></div></div> <div class="pctraised" style="color:#000; text-align:center; text-transform: uppercase;">€15.000 {{tofinishproject}}</div>
+		</div>
+	</div>
+</template>
+
+<template name="supporters">
+	<div id="listPledges" class="animated fadeIn">	
+		<div id="film-supported-by"><h3>{{supporterCount}}</h3></div>
+		<ul class="thumbnails span8" id="listSupporters">  
+		{{#each listHavePledged}}
+			<li class="span1">
+				{{#if profile.message}}	
+					<a href="#" class="tip-trigger tipFadeUp">
+					<span><i class="icon-quote-left"></i> {{profile.message}} <i class="icon-quote-right"></i></span>
+				{{/if}}	
+				<div class="thumbnail supporter" id="{{_id}}">
+					<img src="{{profile.picture}}&width=90&height=90" class="img-rounded" style="width:90px;" />
+					<p>{{profile.name}}</p>
+				</div>
+				{{#if profile.message}}	
+					</a>
+				{{/if}}	
+			</li>
+		{{/each}}
+		</ul>
+		<div style="float:right;font-weight:600;"><span style="padding-right:5px;"><i class="icon-map-marker"></i> São Tomé </span><span><i class="icon-time"></i> {{daysUntilFinish}} {{daystogo}}</span></div>
+	</div>
+</template>
+	
+<template name="paradiseLoggedOut">
+	<div class="span2"></div>
+	<div class="span9">
+		<div class="row">
+			<div class="span9 animated fadeIn" id="paradise">
+				<img src="img/paradise.png" alt="Enter Paradise" />
+			</div>
+		</div>
+	</div>
+	<div class="span1"></div>
+</template>
+
+<template name="why">
+	<div id="why">	
+		<div style="margin: 40px 0px 0px 0px;">
+			<form id="myform">
+			  <input class="span4" type="text" id="updateMessage" value="{{currentMessage}}" maxlength="48" placeholder="{{why48}}." />
+			  <input type="submit" id="updateMessageBtn" class="hide"/>
+			</form>
+		</div>
+	</div>
+</template>
+
+<template name="pledge">
+	<div id="pledge" class="animated fadeIn">	
+		<div class="media">
+		  <div class="pull-left">
+			<div id="btn" class="undone">
+			  <img src="img/check.png" align="center" id="check" align="center"/>
+			  <span id="dsc">{{joinsupporters}}</span>
+			</div>
+		  </div>
+		  <div class="media-body" id="tick-this-box">
+			{{addmoney}}
+		  </div>
+		</div>
+	</div>
+</template>		

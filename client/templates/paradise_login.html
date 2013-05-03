@@ -1,0 +1,24 @@
+<template name="user_info">
+		{{#if currentUser}}
+			{{> user_loggedin}}
+		{{else}}
+			{{> user_loggedout}}
+		{{/if}}
+</template>
+
+<template name="user_loggedin">
+	{{#if loggingIn}}
+		<h3 style="margin-bottom:0px;">{{entering}}...</h3>>
+	{{else}}
+		<div class="animated fadeIn" id="you-have-subscribed">
+			<h3 style="margin-bottom:0px;">{{youhaveloggedin}}</h3>
+			<p>{{congrats}}</p>
+		</div>
+	{{/if}}
+</template>
+
+<template name="user_loggedout">
+	<div class="animated fadeIn">
+		<div id="login" class="animated tada button"><span>{{entrance}}</span></div>
+	</div>
+</template>

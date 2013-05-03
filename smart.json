@@ -1,0 +1,31 @@
+{
+  "meteor": {
+    "git": "https://github.com/meteor/meteor.git",
+    "branch": "master"
+  },
+  "packages": {
+    "bootstrap-updated": {},
+    "isotope": {},
+    "router": {},
+    "tween": {},
+    "transitioner": {},
+    "toastjs": {},
+    "raphaeljs-package": {},
+    "font-awesome": {},
+    "animate-css": {},
+    "mixpanel": {},
+    "tracker": {},
+    "leaflet": {},
+    "sugar": {},
+    "jquery-ui": {},
+    "session-extras": {},
+    "connect": {},
+    "headly": {},
+    "i18n": {},
+    "simple-i18n": {},
+    "jquery-scrollTo": {},
+    "jquery-scrollintoview": {},
+    "parsleyjs": {},
+    "analytics-node-npm": {}
+  }
+}

@@ -1,0 +1,25 @@
+<template name="admin">
+	<div class="container">
+		<div id="admin" class="animated fadeIn" style="margin-bottom:20px;">
+			<div class="row" id="row-admin-header">
+				<div class="span12 admin" id="admin-header">
+					<div>
+						<h1 class="animated fadeIn" id="title-admin-area">Admin Area</h1>
+					</div>
+				</div>
+			</div>
+			<div class="row" id="row-admin" style="">
+				<div class="container admin" style="padding: 20px 0px 20px 0px; height: 650px;">
+					<div class="span2"></div>
+					<div class="span8" style="background: rgba(0, 0, 0, 0.5); border-radius:7px; border: 2px solid #fff; padding:40px; margin:25px 0px 0px -30px; height: 550px;">
+						{{#if showAdminDialog}}
+						  Hello Admin
+						{{/if}}			
+					  	{{directory}}
+					</div>
+					<div class="span2"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

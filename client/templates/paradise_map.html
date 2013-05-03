@@ -1,0 +1,40 @@
+<template name="ipad">
+	<div class="container">
+		<div class="row" id="row-ipad">
+			<div class="span12 ipad" id="ipad">
+				<div class="row">
+					<div class="span1"></div>
+					<div class="span10">
+						<div class="launch-promise" id="launch-promise">{{amazinglaunching}}</div>
+					</div>
+					<div class="span1"></div>
+				</div>
+				<div class="row">
+					<div class="span7">
+						<div class="map_tilted" id="map_tilted">{{> map}}</div>
+					</div>
+					<div class="span4">
+						<div id="sales-argument">
+							<ul class="sales-argument unstyled">
+								<li><strong>{{appfeatures}}</strong></li>
+								<li>{{hd72min}}</li>
+								<li>{{journeymap}}</li>
+								<li><a href="#art">{{hdpaintings}}</a></li>
+							</ul>
+							{{> user_info}}
+						</div>
+					</div>
+					<div class="span1"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="map">
+  {{#constant}}
+	<div id="map-container" class="map-container" style="width:400px;height:600px;">
+	  <div id="map" class="map"></div>
+	</div>
+  {{/constant}}
+</template>

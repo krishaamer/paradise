@@ -1,0 +1,166 @@
+{
+  "meteor": {
+    "git": "https://github.com/meteor/meteor.git",
+    "branch": "master",
+    "commit": "bfe4b72ebec4367eaddcdf0887fcf5e649d9dcb8"
+  },
+  "dependencies": {
+    "basePackages": {
+      "bootstrap-updated": {},
+      "isotope": {},
+      "router": {},
+      "tween": {},
+      "transitioner": {},
+      "toastjs": {},
+      "raphaeljs-package": {},
+      "font-awesome": {},
+      "animate-css": {},
+      "mixpanel": {},
+      "tracker": {},
+      "leaflet": {},
+      "sugar": {},
+      "jquery-ui": {},
+      "session-extras": {},
+      "connect": {},
+      "headly": {},
+      "i18n": {},
+      "simple-i18n": {},
+      "jquery-scrollTo": {},
+      "jquery-scrollintoview": {},
+      "parsleyjs": {},
+      "analytics-node-npm": {}
+    },
+    "packages": {
+      "bootstrap-updated": {
+        "git": "https://github.com/Charuru/bootstrap-updated.git",
+        "tag": "v1.0.1",
+        "commit": "bdd5fcc8e134e62bcbb9d11aad8270534ffb6493"
+      },
+      "isotope": {
+        "git": "https://github.com/digioak/meteor-isotope.git",
+        "tag": "v0.0.3",
+        "commit": "6fa8d0cd5ad50ea2292f2ce03ea619adc6c13c58"
+      },
+      "router": {
+        "git": "https://github.com/tmeasday/meteor-router.git",
+        "tag": "v0.5.1",
+        "commit": "32e377c7703bb119acccc859fc7296882903cbe7"
+      },
+      "tween": {
+        "git": "https://github.com/vedosity/meteor-tween.git",
+        "tag": "v0.10.0",
+        "commit": "a6e30c0fb7f22839eeb1dff0951ba51e873d0612"
+      },
+      "transitioner": {
+        "git": "https://github.com/tmeasday/meteor-transitioner.git",
+        "tag": "v0.2.3",
+        "commit": "a9f4a19bd425252471887cfb03586bf910f35b0d"
+      },
+      "toastjs": {
+        "git": "https://github.com/srackham/toast.js.git",
+        "tag": "v2.0.5",
+        "commit": "55f5af84be856ab819bdda4135f4203c499cf2d6"
+      },
+      "raphaeljs-package": {
+        "git": "https://github.com/doubledare/raphaeljs-package.git",
+        "tag": "v0.1.0",
+        "commit": "3945af98a318e189d45e9118db4040ea8cbb9596"
+      },
+      "font-awesome": {
+        "git": "https://github.com/nate-strauser/meteor-font-awesome.git",
+        "tag": "v0.1.3",
+        "commit": "e507577b97827de662866304f8b9d3d553e3912f"
+      },
+      "animate-css": {
+        "git": "https://github.com/nate-strauser/meteor-animate-css.git",
+        "tag": "v0.1.0",
+        "commit": "993c626b204e596c41cda63cb3fbb0ca3aa5deea"
+      },
+      "mixpanel": {
+        "git": "https://github.com/belisarius222/meteor-mixpanel.git",
+        "tag": "v2.2.1",
+        "commit": "4f93df31401f2f205b418e001a72e37844f68638"
+      },
+      "tracker": {
+        "git": "https://github.com/svda/meteor-tracker.git",
+        "tag": "v0.1.0",
+        "commit": "e436fe8a097bf2090ab742306c9cc31a826e41b6"
+      },
+      "leaflet": {
+        "git": "https://github.com/bevanhunt/meteor-leaflet.git",
+        "tag": "v0.1.8",
+        "commit": "8a3d0f53734e4fe3efc3e6e39aa3da0209e2ec8e"
+      },
+      "sugar": {
+        "git": "https://github.com/bevanhunt/meteor-sugar.git",
+        "tag": "v0.0.9",
+        "commit": "751a4465e0a7d7e4e800e794ca1e6a449e15e63d"
+      },
+      "jquery-ui": {
+        "git": "https://github.com/TimHeckel/meteor-jquery-ui.git",
+        "tag": "v1.9.2",
+        "commit": "c437d45edcf1367df8d5ffa8bad2867758030bd2"
+      },
+      "session-extras": {
+        "git": "https://github.com/belisarius222/meteor-session-extras.git",
+        "tag": "v0.3.0",
+        "commit": "0c49d41009821e76f46af3ad65d0a1d5bfa8d4eb"
+      },
+      "connect": {
+        "git": "https://github.com/peerlibrary/meteor-connect.git",
+        "tag": "v0.1.0",
+        "commit": "ff116f1df4ebed84262047460230b72afbbe34b9"
+      },
+      "headly": {
+        "git": "https://github.com/ayal/headly",
+        "tag": "v0.0.42",
+        "commit": "47d3aa3784b8b55a61c96611c19a0d6f23b6d55f"
+      },
+      "i18n": {
+        "git": "https://github.com/jerico-dev/meteor-i18n.git",
+        "tag": "v0.0.9",
+        "commit": "2cd6c72107a0d4afde57fb765ce9d57ad8ba43e2"
+      },
+      "simple-i18n": {
+        "git": "https://github.com/txgruppi/meteor-simple-i18n.git",
+        "tag": "v0.1.7",
+        "commit": "b7712e2042078faa7bc3363ac7b938a492d5e31b"
+      },
+      "jquery-scrollTo": {
+        "git": "https://github.com/nate-strauser/meteor-jquery.scrollTo.git",
+        "tag": "v0.1.0",
+        "commit": "829354b46fa15a7b5736c7a3a71fdd93d8eea61d"
+      },
+      "jquery-scrollintoview": {
+        "git": "https://github.com/WeekdayFiller/meteor-jquery.scrollintoview",
+        "tag": "v1.8.0",
+        "commit": "2adb657b6f6c09728d726b26d6b3d1de85b41f9a"
+      },
+      "parsleyjs": {
+        "git": "https://github.com/nate-strauser/meteor-parsleyjs.git",
+        "tag": "v0.1.0",
+        "commit": "5ec267dcc1af252774a23dfc8b0c9c495fe2a8cb"
+      },
+      "analytics-node-npm": {
+        "git": "https://github.com/nate-strauser/meteor-analytics-node.git",
+        "tag": "v0.1.0",
+        "commit": "dc50d6a39535d8e0460dde8b3ab7084167a667e9"
+      },
+      "page-js-ie-support": {
+        "git": "https://github.com/tmeasday/meteor-page-js-ie-support.git",
+        "tag": "v1.3.5",
+        "commit": "b99ed8380aefd10b2afc8f18d9eed4dd0d8ea9cb"
+      },
+      "deps-extensions": {
+        "git": "https://github.com/tmeasday/meteor-deps-extensions.git",
+        "tag": "v0.1.0",
+        "commit": "110462c0ba33aaeb35e55069134287325cc453e5"
+      },
+      "underscore-string": {
+        "git": "https://github.com/possibilities/meteor-underscore-string.git",
+        "tag": "v2.2.0rc.1",
+        "commit": "dec21fac23310daf76dc19f246749e7beb48af03"
+      }
+    }
+  }
+}
