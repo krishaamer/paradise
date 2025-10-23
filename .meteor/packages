@@ -1,0 +1,8 @@
+# Core app packages (Meteor 0.9 era)
+standard-app-packages
+
+# Accounts (for loginWithFacebook usage in code)
+accounts-ui
+accounts-password
+accounts-facebook
+
