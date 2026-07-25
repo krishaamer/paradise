@@ -1,0 +1,168 @@
+/* Ported from legacy client/css/paradise.css with minimal changes */
+
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+
+body {
+  background:#000;
+  font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue';
+  color:#fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue';
+  font-size:1.5em;
+  color:#fff;
+}
+
+h6 {
+  font-family: 'Helvetica Neue';
+  font-size:1.5em;
+  color:#fff;
+  font-weight: 200;
+}
+
+p { color:#fff; }
+
+#hero {
+  background:url(/img/hero.jpg) repeat;
+  min-height: 485px;
+  margin-bottom: 20px;
+  border: 0px #000 solid;
+  border-radius: 7px;
+}
+
+.artists h4 {
+  font-family:'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue';
+  font-size:36px;
+  font-weight:100;
+  text-transform: none;
+}
+
+.expert h1 {
+  font-family:'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue';
+  font-size:60pt;
+  font-weight:100;
+  font-style: oblique;
+  color: #0b8cbe;
+  text-transform: capitalize;
+  margin-bottom: 0px;
+  text-shadow:0px 3px 10px #0057b2;
+  padding:50px;
+}
+
+.featured h1, .movie h1, .private h1, .player h1, .admin h1 {
+  font-family:'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue';
+  font-size:60pt;
+  font-weight:100;
+  color: #0b8cbe;
+  text-transform: capitalize;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.featured h2 {
+  font-family:'HelveticaNeue-Light', 'Helvetica Neue UltraLight', 'Helvetica Neue';
+  font-size:30px;
+  font-weight:100;
+  font-style: italic;
+  color: #0b8cbe;
+  text-transform: uppercase;
+  display: none;
+}
+
+.progress { 
+  -webkit-border-radius: 0px 0px 7px 7px;
+  -moz-border-radius: 0px 0px 7px 7px;
+  border-radius: 0px 0px 7px 7px;
+}
+
+#title-featured-artist, #title-movie, #title-private-area, #title-admin-area, #title-player  {
+  padding:50px 100px 5px 20px;
+}
+
+.thumbnail h3 { padding: 10px 10px 0px 10px; }
+.thumbs { background: #0c0d0b; }
+.thumbnail p { padding: 0px 10px 10px 10px; }
+
+#row-expert, #row-movie, #row-artwork, #row-artists, #row-featured, #row-thumbnails, #row-storyline, #flipboard, #row-private, #row-player, #row-admin{
+  overflow: hidden;
+}
+
+#row-expert { cursor: pointer; }
+.artists { padding-bottom:40px; }
+.artist {
+  background: #0c0d0b;
+  padding-top: 10px;
+  cursor: pointer;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 7px;
+  border:2px solid #000;
+}
+.artist:hover {
+  background: #000;
+  border-color: rgba(120, 200, 255, 0.6);
+  border-style: solid;
+  border-width: 2px;
+  box-shadow:
+    0 2px 0 0 rgba(120, 200, 255, 0.4),
+    0 2px 0 0 rgba(120, 200, 255, 0.5),
+    0 0 2px 2px rgba(120, 200, 255, 0.75),
+    0 0 2px 2px rgba(120, 200, 255, 0.75);
+}
+.movie-still:hover {
+  background: #000;
+  border-color: rgba(120, 200, 255, 0.6);
+  border-style: solid;
+  border-width: 0px;
+  box-shadow:
+    0 2px 0 0 rgba(120, 200, 255, 0.4),
+    0 2px 0 0 rgba(120, 200, 255, 0.5),
+    0 0 2px 2px rgba(120, 200, 255, 0.75),
+    0 0 2px 2px rgba(120, 200, 255, 0.75);
+}
+.supporter:hover {
+  cursor: pointer;
+  box-shadow:
+    0 2px 0 0 rgba(120, 200, 255, 0.4),
+    0 2px 0 0 rgba(120, 200, 255, 0.5),
+    0 0 2px 2px rgba(120, 200, 255, 0.75),
+    0 0 2px 2px rgba(120, 200, 255, 0.75);
+}
+.thumb-selected {
+  background: #000;
+  border-color: rgba(120, 200, 255, 0.6);
+  border-style: solid;
+  border-width: 0px;
+  box-shadow:
+    0 2px 0 0 rgba(120, 200, 255, 0.4),
+    0 2px 0 0 rgba(120, 200, 255, 0.5),
+    0 0 2px 2px rgba(120, 200, 255, 0.75),
+    0 0 2px 2px rgba(120, 200, 255, 0.75);
+}
+
+#featured-1 { margin-top: 10px; height:200px; background: #0c0d0b; }
+.artists .media-body {
+  font-family:'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue';
+  font-size:12px;
+  font-weight:100;
+  text-transform: uppercase;
+}
+
+#footer { height:30px; background: #000; }
+.navbar .brand { margin-left: 0px; }
+.art-scroller { margin-bottom: 0px; }
+#movie { margin-bottom: 20px; }
+#art-gallery { margin-top: 20px; }
+.movie-still { cursor:pointer; }
+
+#ipad { background:url(/img/ipad.jpg) repeat; height: 1061px; margin-top: 30px; margin-bottom: 10px; }
+.media { padding-left:10px; }
+.media-body { padding-top:10px; padding-right:10px; }
+
+#login { margin-top: 25px; }
+#login, #logout, #pledge, #navlogin { cursor:pointer; }
+
+/* overrides for Next container spacing */
+.container { position: relative; }
+
